@@ -1,7 +1,7 @@
 <template lang="pug">
 	#profile.profile
 		.container
-			p.text-center This is Profile page
+			p.text-center {{ $t("message.lorem") }}
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
 	name: 'Profile',
 	data () {
 		return {
-			
+
 		}
 	}
 }

@@ -2,6 +2,7 @@
 	#home.home
 		.container
 			img.mx-auto.d-block(src="../../assets/logo.png")
+			p.text-center.mb-5 {{ $t("message.lorem") }}
 			.row
 				.col-lg-4.mb-4(v-for="item in articles")
 					article.text-center
@@ -14,7 +15,7 @@ export default {
 	name: 'Home',
 	data () {
 		return {
-			
+
 		}
 	},
 	computed: {

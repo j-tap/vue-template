@@ -3,7 +3,7 @@
         router-link(class="nav-item" v-for="item in pages" v-bind:data="item" v-bind:key="item.name" exact-active-class="is-active" tag="li" :to="item.path")
             a.nav-link(href="#")
                 //i.material-icons {{ item.icon }}
-                span {{ item.title }}
+                span {{ $t('message.mainNav.' + item.name) }}
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
 	name: 'MainNav',
 	data: () => {
 		return {
-			pages: routes.filter(item => item.menu == 'main')
+			pages: routes.filter(item => item.menu === 'main')
 		}
 	}
 }

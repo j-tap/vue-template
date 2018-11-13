@@ -12,8 +12,8 @@ const store = new Vuex.Store({
 		getArticles: state => state.articles
 	},
 	actions: {
-		loadArticles(
-			context,  
+		loadArticles (
+			context,
 			options = {
 				params: {
 					_start: 0,
@@ -33,9 +33,8 @@ const store = new Vuex.Store({
 			let url = 'https://jsonplaceholder.typicode.com/posts'
 			if (data.path > 0) url += Vue.methods.arrToUrlPath(data.path)
 			if (data.params > 0) url += Vue.methods.objToUrlParams(data.params)
-			
+
 			Vue.http.get(url, options).then(function (response) {
-				//console.log(response)
 				context.commit('loadArticles', response.data)
 				context.commit('setPreloader', false)
 			}, function (error) {
@@ -45,10 +44,10 @@ const store = new Vuex.Store({
 		}
 	},
 	mutations: {
-		loadArticles(state, payload) {
+		loadArticles (state, payload) {
 			state.articles = payload
 		},
-		setPreloader(state, value) {
+		setPreloader (state, value) {
 			state.preloader = value
 		}
 	}

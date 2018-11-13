@@ -5,6 +5,7 @@ import VueResource from 'vue-resource'
 import App from './App'
 import router from './router'
 import store from './store'
+import i18n from './lang'
 import Preloader from './components/Preloader.vue'
 import Header from './components/Header.vue'
 import MainNav from './components/MainNav.vue'
@@ -20,6 +21,7 @@ window.App = new Vue({
 	el: '#app',
 	router,
 	store,
+	i18n,
 	components: { App },
 	template: '<App/>'
 })
@@ -29,17 +31,17 @@ Vue.mixin({
 		objToUrlParams: (oParams = {}) => {
 			let sSerialize = ''
 			for (let key in oParams) {
-				if (sSerialize != '') {
+				if (sSerialize !== '') {
 					sSerialize += '&'
 				}
-				sSerialize += key +'='+ encodeURIComponent(oParams[key])
+				sSerialize += key + '=' + encodeURIComponent(oParams[key])
 			}
 			return sSerialize
 		},
 		arrToUrlPath: (aParams = []) => {
 			let sSerialize = ''
 			aParams.forEach((item, i) => {
-				sSerialize += '/'+ item
+				sSerialize += '/' + item
 			})
 			return sSerialize
 		}

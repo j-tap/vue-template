@@ -1,6 +1,6 @@
 <template lang="pug">
 	#app
-		Header(brand="Vue SPA Template")
+		Header
 		main#main
 			.container-fluid
 				.row.row-offcanvas.row-offcanvas-left
@@ -16,7 +16,7 @@ export default {
 	name: 'App',
 	data () {
 		return {
-			
+
 		}
 	},
 	created () {
