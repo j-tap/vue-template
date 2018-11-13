@@ -1,6 +1,6 @@
 # vue-spa
 
-> A Vue.js project
+> My VueJs SPA project template based Vue-cli used Pug, Scss, Bootstrap, Vue-router, Vuex, VueI18n
 
 ## Build Setup
 
